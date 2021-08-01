@@ -32,8 +32,8 @@ header .container .logo-container {
     flex: 1;
     min-height: 50px;
     min-width: 50px;
-    max-height: 100px;
-    max-width: 100px;
+    max-height: 80px;
+    max-width: 80px;
     position: relative;
     margin: auto;
 }
@@ -72,8 +72,8 @@ header .container .menu-container ul li {
 header .container .menu-container ul li a {
     font-size: 20px;
     padding: 0 10px;
-    color: var(--main-color);
-    text-decoration: solid;
+    color: rgb(49, 49, 49);
+    text-decoration: none;
     transition: 0.5s;
 }
 
@@ -81,8 +81,7 @@ header .container .menu-container ul li:hover a {
     font-size: 20px;
     padding: 0 5px;
     letter-spacing: 1.02px;
-    color: rgb(143, 2, 2);
-    text-decoration: underline;
+    color: var(--main-color);
     transition: 0.5s;
 }
 

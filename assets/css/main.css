@@ -275,10 +275,26 @@ header .container .space-end {
     -webkit-text-stroke: 1px var(--main-color)
 }
 
-.main .slider .title .typing {
-    margin-top: -30px;
-    font-size: 20px;
+.main .slider .title .hidden {
+    opacity: 0;
+}
+
+.main .slider .title .console-container {
+    font-family: var(--title-font-family);
+    font-size: 2em;
+    text-align: center;
+    display: block;
+    position: absolute;
     color: var(--theme-font-color);
+    left: 0%;
+    top: 150px;
+}
+
+.main .slider .title .console-underscore {
+    display: inline-block;
+    position: relative;
+    top: -0.14em;
+    left: 10px;
 }
 
 .main .slider .sol {

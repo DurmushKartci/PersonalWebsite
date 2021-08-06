@@ -1,10 +1,47 @@
 :root {
     --main-color: #881010;
-    --title-font-family: sans-serif;
+    --title-font-family: 'Ubuntu', sans-serif;
+    --theme-color: #010409;
+    --theme-font-color: #f0f6fc;
+}
+
+* {
+    cursor: none;
 }
 
 body {
     margin: 0;
+    background: var(--theme-color)
+}
+
+.cursor {
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    pointer-events: none;
+    border-radius: 100%;
+    transition: 0.15s;
+    z-index: 1000;
+}
+
+.point {
+    width: 7.5px;
+    height: 7.5px;
+    position: fixed;
+    background: var(--main-color);
+    border: 100% solid var(--main-color);
+    pointer-events: none;
+    border-radius: 100%;
+    z-index: 1005;
+}
+
+.link-grow {
+    transform: scale(2);
+    background-color: var(--main-color);
+    opacity: 0.35;
+    pointer-events: none;
 }
 
 
@@ -16,10 +53,14 @@ header .container {
     display: flex;
     direction: row;
     height: 110px;
-    background: #fff;
+    background: var(--theme-color);
     box-shadow: 0px 7px 30px #76767680;
     z-index: 100;
     left: 0px;
+}
+
+header .container:hover {
+    box-shadow: 0px 7px 30px var(--main-color);
 }
 
 header .container .space-begin {
@@ -44,19 +85,20 @@ header .container .title {
 }
 
 header .container .title h1 {
-    color: #881010;
+    color: var(--theme-font-color);
     font-family: var(--title-font-family);
 }
 
 header .container .space-middle {
-    flex: 2;
+    flex: 0;
 }
 
 header .container .menu-container {
-    flex: 5;
+    flex: 6;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: nowrap;
 }
 
 header .container .menu-container ul {
@@ -68,9 +110,11 @@ header .container .menu-container ul li {
 }
 
 header .container .menu-container ul li a {
-    font-size: 20px;
-    padding: 0 10px;
-    color: rgb(49, 49, 49);
+    font-size: 18px;
+    font-weight: bold;
+    font-family: var(--title-font-family);
+    padding: 0 7.5px;
+    color: var(--theme-font-color);
     text-decoration: none;
     transition: 0.5s;
 }
@@ -84,7 +128,7 @@ header .container .menu-container ul li:hover a {
 }
 
 header .container .media-container {
-    flex: 3;
+    flex: 4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,10 +159,10 @@ header .container .media-container ul li a {
 }
 
 header .container .media-container ul li:hover a {
-    font-size: 25px;
+    font-size: 21px;
     padding: 0 10px;
-    letter-spacing: 1.02px;
-    color: rgb(143, 2, 2);
+    letter-spacing: 1.001px;
+    color: var(--main-color);
     transition: 0.7s;
 }
 
@@ -166,6 +210,13 @@ header .container .space-end {
 
 .main .slider .title h1 {
     font-size: 80px;
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.main .slider .title span {
+    color: transparent;
+    -webkit-text-stroke: 0.1px var(--main-color)
 }
 
 .main .slider .title .typing {
@@ -181,7 +232,10 @@ header .container .space-end {
 .main .slider .sag {
     flex: 1;
     order: 2;
-    background: url("../images/logo.png");
+    background: url("../images/slider/zuko.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 

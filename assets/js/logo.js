@@ -1,7 +1,6 @@
 let d = document.getElementById("d")
 let k = document.getElementById("k")
 let logo = document.getElementById("logo")
-let root = document.documentElement;
 
 function update_sizes() {
     logo.style.height = logo.clientWidth + "px";

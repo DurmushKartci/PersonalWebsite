@@ -11,7 +11,30 @@
 
 body {
     margin: 0;
-    background: var(--theme-color)
+    background: var(--theme-color);
+}
+
+::-webkit-scrollbar {
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: 5px 0 5px -5px var(--theme-font-color);
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    opacity: 0.5;
+    transition: 5s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--main-color);
+    opacity: 1;
+    transition: 5s;
 }
 
 .cursor {
@@ -216,7 +239,7 @@ header .container .space-end {
 
 .main .slider .title span {
     color: transparent;
-    -webkit-text-stroke: 0.1px var(--main-color)
+    -webkit-text-stroke: 1px var(--main-color)
 }
 
 .main .slider .title .typing {

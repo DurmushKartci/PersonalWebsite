@@ -6,8 +6,9 @@ let header_links = document.querySelectorAll("li")
 let titles_h1 = document.querySelectorAll("h1")
 let theme_button = document.getElementById("theme")
 let theme_icon = document.getElementById("theme_icon")
-let cursor = document.getElementById("cursor")
+let main_color_button = document.getElementById("main-color")
 let point = document.getElementById("point")
+let body = document.querySelector("body")
 
 //true --> dark || false --> light
 let theme_state = true;
@@ -16,21 +17,28 @@ let root = document.documentElement;
 
 ///////////////////// MAİN /////////////////////////// 
 
+main_color_button.onclick = function() {
+    root.style.setProperty("--main-color", "rgb(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + ")")
+}
 window.addEventListener("mousemove", update_cursor)
 header_links.forEach(link => {
     link.addEventListener("mouseover", () => {
         cursor.classList.add("link-grow")
+        point.style.opacity = 0;
     })
     link.addEventListener("mouseleave", () => {
         cursor.classList.remove("link-grow")
+        point.style.opacity = 1;
     })
 })
 titles_h1.forEach(link => {
     link.addEventListener("mouseover", () => {
         cursor.classList.add("link-grow")
+        point.style.opacity = 0;
     })
     link.addEventListener("mouseleave", () => {
         cursor.classList.remove("link-grow")
+        point.style.opacity = 1;
     })
 })
 

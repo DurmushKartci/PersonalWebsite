@@ -193,6 +193,39 @@ header .container .space-end {
     flex: 1;
 }
 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--main-color);
+    box-shadow: 0px 8px 16px 0px var(--theme-font-color);
+    z-index: 1;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.dropdown-content input {
+    float: none;
+    color: var(--theme-font-color);
+    padding: 16px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border: none;
+    background: var(--main-color);
+    -webkit-appearance: none;
+    text-align: center;
+}
+
+.dropdown-content input::-webkit-outer-spin-button,
+.dropdown-content input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.main-color:hover .dropdown-content {
+    display: block;
+}
+
 
 /* // HEADER */
 

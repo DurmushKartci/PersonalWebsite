@@ -9,6 +9,9 @@ let theme_icon = document.getElementById("theme_icon")
 let main_color_button = document.getElementById("main-color")
 let point = document.getElementById("point")
 let body = document.querySelector("body")
+let main_color_changer_red = document.getElementById("red")
+let main_color_changer_green = document.getElementById("green")
+let main_color_changer_blue = document.getElementById("blue")
 
 //true --> dark || false --> light
 let theme_state = true;
@@ -17,9 +20,6 @@ let root = document.documentElement;
 
 ///////////////////// MAİN /////////////////////////// 
 
-main_color_button.onclick = function() {
-    root.style.setProperty("--main-color", "rgb(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + ")")
-}
 window.addEventListener("mousemove", update_cursor)
 header_links.forEach(link => {
     link.addEventListener("mouseover", () => {
@@ -55,9 +55,27 @@ theme_button.onclick = function() {
     }
 }
 
+main_color_changer_red.oninput = () => {
+    set_main_color(root, main_color_changer_red.value, main_color_changer_green.value, main_color_changer_blue.value);
+}
+
+main_color_changer_blue.oninput = () => {
+    set_main_color(root, main_color_changer_red.value, main_color_changer_green.value, main_color_changer_blue.value);
+}
+
+main_color_changer_green.oninput = () => {
+    set_main_color(root, main_color_changer_red.value, main_color_changer_green.value, main_color_changer_blue.value);
+}
+
+
+
 /////////////////////* MAİN ///////////////////////////
 
 ///////////////////// FUNCTIONS /////////////////////////// 
+
+function set_main_color(root, red, green, blue) {
+    root.style.setProperty("--main-color", "rgb(" + red + "," + green + "," + blue + ")")
+}
 
 function update_cursor(e) {
     cursor.style.top = (e.clientY - cursor.clientHeight / 2) + "px";

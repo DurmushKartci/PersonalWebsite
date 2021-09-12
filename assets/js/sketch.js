@@ -12,6 +12,7 @@ let body = document.querySelector("body")
 let main_color_changer_red = document.getElementById("red")
 let main_color_changer_green = document.getElementById("green")
 let main_color_changer_blue = document.getElementById("blue")
+let cursor = document.getElementById("cursor")
 
 //true --> dark || false --> light
 let theme_state = true;
@@ -24,21 +25,21 @@ window.addEventListener("mousemove", update_cursor)
 header_links.forEach(link => {
     link.addEventListener("mouseover", () => {
         cursor.classList.add("link-grow")
-        point.style.opacity = 0;
+        point.style.background = "var(--theme-font-color)";
     })
     link.addEventListener("mouseleave", () => {
         cursor.classList.remove("link-grow")
-        point.style.opacity = 1;
+        point.style.background = "var(--main-color)";
     })
 })
 titles_h1.forEach(link => {
     link.addEventListener("mouseover", () => {
         cursor.classList.add("link-grow")
-        point.style.opacity = 0;
+        point.style.background = "var(--theme-font-color)";
     })
     link.addEventListener("mouseleave", () => {
         cursor.classList.remove("link-grow")
-        point.style.opacity = 1;
+        point.style.background = "var(--main-color)";
     })
 })
 

@@ -36,8 +36,7 @@
 <body>
     <div class="point" id="point"></div>
     <!-- CURSOR SECTION BEGIN -->
-    <div class="cursor" id="cursor">
-    </div>
+    <div class="cursor" id="cursor"></div>
     <!-- CURSOR SECTION END -->
 
     <!-- HEADER SECTION BEGIN -->
@@ -84,16 +83,6 @@
                         </li>
                         <li>
                             <a href="javascript:void(0);" id="theme"><i class="fas fa-moon" id="theme_icon"></i></a>
-                        </li>
-                        <li class="main-color">
-                            <a href="javascript:void(0);" id="main-color">
-                                <i class="fas fa-palette"></i>
-                                <div class="dropdown-content">
-                                    <input type="number" min="0" max="255" id="red" value="136"></input>
-                                    <input type="number" min="0" max="255" id="green" value="16"></input>
-                                    <input type="number" min="0" max="255" id="blue" value="16"></input>
-                                </div>
-                            </a>
                         </li>
                     </ul>
                 </div>
@@ -153,7 +142,44 @@
 
         <!-- FOOTER SECTION BEGIN -->
         <footer>
+            <div class="footer-container">
+                <div class="left">
+                    <div class="rgb-inputs">
+                        <div class="r-input inputs">
+                            <div class="text">
+                                <p>Kırmızı : </p>
+                            </div>
+                            <div class="input">
+                                <input type="number" name="kirmizi" id="red" value="16" min="0" max="255">
+                            </div>
+                        </div>
+                        <div class="g-input inputs">
+                            <div class="text">
+                                <p>Yeşil : </p>
+                            </div>
+                            <div class="input">
+                                <input type="number" name="yesil" id="green" value="136" min="0" max="255">
+                            </div>
+                        </div>
+                        <div class="m-input inputs">
+                            <div class="text">
+                                <p>Mavi : </p>
+                            </div>
+                            <div class="input">
+                                <input type="number" name="mavi" id="blue" value="16" min="0" max="255">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="middle">
+                    <div class="text">
+                        <p>Bu websitenin bütün hakları <span>Durmuş Kartcı</span> 'ya aittir.</p>
+                    </div>
+                </div>
+                <div class="right">
 
+                </div>
+            </div>
         </footer>
         <!-- FOOTER SECTION END -->
     </div>

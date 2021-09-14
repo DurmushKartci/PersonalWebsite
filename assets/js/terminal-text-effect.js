@@ -1,6 +1,6 @@
 // function([string1, string2],target id,[color1,color2])    
 consoleText(
-    ['Front End Developer', 'Gitarist', 'Web Tasarımcısı', 'Wordpress Öğrencisi', 'Back End Öğrencisi'], 'text', ['var(--main-color)', 'var(--main-color)', 'var(--main-color)']);
+    ['Front End Developer', 'Gitarist', 'Web Tasarımcısı', 'Back End Junior Developer'], 'text', ['var(--main-color)', 'var(--main-color)', 'var(--main-color)']);
 
 function consoleText(words, id, colors) {
     if (colors === undefined) colors = ['var(--main-color'];

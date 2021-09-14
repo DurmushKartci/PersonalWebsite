@@ -367,6 +367,9 @@ header .container .space-end {
 
 .footer-container .left .rgb-inputs .inputs .input input {
     text-align: center;
+    background: var(--theme-color);
+    color: var(--theme-font-color);
+    border: 3px solid var(--main-color);
 }
 
 .footer-container .middle {

@@ -25,21 +25,25 @@ window.addEventListener("mousemove", update_cursor)
 header_links.forEach(link => {
     link.addEventListener("mouseover", () => {
         cursor.classList.add("link-grow")
-        point.style.background = "var(--theme-font-color)";
+        point.style.border = "0.5px solid var(--theme-font-color)";
     })
     link.addEventListener("mouseleave", () => {
         cursor.classList.remove("link-grow")
         point.style.background = "var(--main-color)";
+        point.style.border = "none";
+
     })
 })
 titles_h1.forEach(link => {
     link.addEventListener("mouseover", () => {
         cursor.classList.add("link-grow")
-        point.style.background = "var(--theme-font-color)";
+        point.style.border = "0.5px solid var(--theme-font-color)";
+
     })
     link.addEventListener("mouseleave", () => {
         cursor.classList.remove("link-grow")
         point.style.background = "var(--main-color)";
+        point.style.border = "none";
     })
 })
 
